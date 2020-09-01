@@ -1,11 +1,19 @@
 {
   "name": "create-heartcode-web-dev",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Create a heartcode web dev env in seconds.",
   "bin": "cli.js",
+  "repository": {
+    "url": "git+https://github.com/smu-heartcode/create-heartcode-web-dev.git",
+    "type": "git"
+  },
   "engines": {
     "node": ">=12"
   },
+  "files": [
+    "cli.js",
+    "saofile.js"
+  ],
   "dependencies": {
     "cac": "^6.6.1",
     "chalk": "^4.1.0",
