@@ -5,7 +5,6 @@ const {SAO} = require('sao')
 const cac = require('cac')
 const chalk = require('chalk')
 const {version} = require('./package.json')
-const download = require('download-git-repo')
 
 const generator = path.resolve(__dirname, './')
 
@@ -34,19 +33,11 @@ cli
       generator, outDir, logLevel, answers
     })
 
-    download('smu-heartcode/web-dev-materials', 'template', err => {
-      if (err) {
+    sao.run()
+      .catch((err) => {
         console.trace(err)
         process.exit(1)
-        return
-      }
-
-      sao.run()
-        .catch((err) => {
-          console.trace(err)
-          process.exit(1)
-        })
-    })
+      })
   })
 
 cli.help()
