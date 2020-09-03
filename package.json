@@ -1,6 +1,6 @@
 {
   "name": "create-heartcode-web-dev",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Create a heartcode web dev env in seconds.",
   "bin": "cli.js",
   "repository": {
@@ -12,7 +12,15 @@
   },
   "files": [
     "cli.js",
-    "saofile.js"
+    "saofile.js",
+    "template/static/**",
+    "template/pages/**",
+    "template/components/**",
+    "template/.editorconfig",
+    "template/nuxt.config.js",
+    "template/jsconfig.json",
+    "template/package-lock.json",
+    "template/package.json"
   ],
   "dependencies": {
     "cac": "^6.6.1",
