@@ -25,8 +25,9 @@ module.exports = {
       ],
       filters: {
         '.idea/**': 'false',
+        '@smu-heartcode/**': 'false',
         '.gitignore': 'false',
-        'README.md': 'false',
+        'README.md': 'false'
       }
     },
   ],
