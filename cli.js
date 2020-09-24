@@ -19,7 +19,7 @@ cli
     const files = fs.existsSync(outDir) ? fs.readdirSync(outDir) : []
 
     console.log()
-    console.log(chalk`{cyan create-nuxt-app v${version}}`)
+    console.log(chalk`{cyan create-heartcode-web-dev v${version}}`)
     if (files.length) {
       return console.log(chalk.red(`Can't create ${outDir} because there's already a non-empty directory ${outDir} existing in path.`))
     }
