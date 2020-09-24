@@ -8,14 +8,14 @@ module.exports = {
   prompts: [
     {
       type: 'input',
-      name: 'cli-username',
+      name: 'username',
       message: 'What is your username?',
     },
     {
       type: 'input',
-      name: 'cli-password',
+      name: 'password',
       message: 'What is the class password?',
-    },
+    }
   ],
   actions: [
     {
@@ -27,12 +27,13 @@ module.exports = {
         '.idea/**': 'false',
         '@smu-heartcode/**': 'false',
         '.gitignore': 'false',
-        'README.md': 'false'
+        'README.md': 'false',
+        'yarn.lock': 'false',
       }
     },
   ],
   async completed () {
-    await this.npmInstall({ npmClient: 'npm' })
+    await this.npmInstall({ npmClient: 'npm'})
 
     const isNewFolder = this.outDir !== process.cwd()
     const relativeOutFolder = relative(process.cwd(), this.outDir)
@@ -41,6 +42,6 @@ module.exports = {
     console.log(chalk`\n🎉  {bold Successfully created heartcode-web-dev project}\n`)
 
     console.log(chalk`  {bold To get started:}\n`)
-    console.log(chalk`${cdMsg}\t{cyan npm dev}\n`)
+    console.log(chalk`${cdMsg}\t{cyan npm run dev}\n`)
   }
 }
