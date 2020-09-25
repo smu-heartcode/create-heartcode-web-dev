@@ -1,6 +1,6 @@
 {
   "name": "create-heartcode-web-dev",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Create a heartcode web dev env in seconds.",
   "bin": "cli.js",
   "license": "MIT",
