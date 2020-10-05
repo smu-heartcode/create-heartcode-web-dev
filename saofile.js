@@ -17,7 +17,7 @@ module.exports = {
       name: 'username',
       message: 'What is your username?',
       validate: (value) => {
-        if (/^[a-z]$/.test(value)) {
+        if (/^[a-z]{1,30}$/.test(value)) {
           return true
         }
         return 'Invalid username, try again.'
