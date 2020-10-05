@@ -20,7 +20,7 @@ module.exports = {
         if (/^[a-z]{1,30}$/.test(value)) {
           return true
         }
-        return 'Invalid username, try again.'
+        return 'Invalid username, lowercase alphabet only (a-z). Please try again.'
       }
     },
     {
@@ -32,7 +32,7 @@ module.exports = {
           return true
         }
 
-        return 'Incorrect password, try again.'
+        return 'Incorrect password, please try again.'
       }
     }
   ],
