@@ -1,6 +1,6 @@
 {
   "name": "create-heartcode-web-dev",
-  "version": "0.1.0",
+  "version": "0.4.3",
   "description": "Create a heartcode web dev env in seconds.",
   "bin": "cli.js",
   "license": "MIT",
@@ -28,6 +28,7 @@
     "cna-template": "^3.2.0",
     "cross-spawn": "^7.0.3",
     "envinfo": "^7.7.2",
+    "js-sha256": "^0.9.0",
     "lodash": "^4.17.19",
     "sao": "beta",
     "validate-npm-package-name": "^3.0.0"
