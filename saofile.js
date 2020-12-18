@@ -1,41 +1,10 @@
-const {dirname, join, relative} = require('path')
-const {sha256} = require('js-sha256')
+const {relative} = require('path')
 const chalk = require('chalk')
-
-function isPasswordValid(password) {
-  const salted = 'a4a0dcae84048562d803f8c7fe43c56ad9e464209271dc2af893994864bbbe80'
-  return sha256(`create-heartcode-web-dev ${password}`) === salted
-}
 
 module.exports = {
   type: 'repo',
   user: 'smu-heartcode',
   repo: 'web-dev-materials',
-  prompts: [
-    {
-      type: 'input',
-      name: 'username',
-      message: 'What is your username?',
-      validate: (value) => {
-        if (/^[a-z]{1,30}$/.test(value)) {
-          return true
-        }
-        return 'Invalid username, lowercase alphabet only (a-z). Please try again.'
-      }
-    },
-    {
-      type: 'input',
-      name: 'password',
-      message: 'What is the class password?',
-      validate: (value) => {
-        if (isPasswordValid(value)) {
-          return true
-        }
-
-        return 'Incorrect password, please try again.'
-      }
-    }
-  ],
   actions: [
     {
       type: 'add',
